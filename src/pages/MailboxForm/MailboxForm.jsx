@@ -6,7 +6,7 @@ import { useNavigate } from "react-router"
 function MailboxForm() {
 
     const [mailboxForm,setMailboxForm] = useState({
-        name:"",
+        owner:"",
         size:"",
     })
 
@@ -17,7 +17,7 @@ function MailboxForm() {
         event.preventDefault()
 
          await axios.post('https://mailbox-lab.onrender.com/mailboxes',mailboxForm)
-         
+
         navigate('/mailboxes')
     }
 
@@ -31,9 +31,9 @@ function MailboxForm() {
 
        <form onSubmit={handleSubmit}>
 
-            <label htmlFor="name">Boxholder Name:</label>
+            <label htmlFor="owner">Boxholder Name:</label>
 
-            <input value={mailboxForm.name} onChange={handleChange} name='name' type="text" />
+            <input value={mailboxForm.name} onChange={handleChange} name='owner' type="text" />
 
             <label htmlFor="size">Box Size:</label>
 

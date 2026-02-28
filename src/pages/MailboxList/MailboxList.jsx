@@ -18,10 +18,10 @@ function MailboxList() {
   return (
     <div>
         {list.map((aMail)=>
-        <div key={list._id}>
-            <h2>Boxholder Name: {list.name}</h2>
-            <p>Box size:{list.size}</p>
-            <Link to={'/mailboxes/' + list._id}>Mailbox Details</Link>
+        <div key={aMail._id}>
+            <h2>Boxholder Name: {aMail.owner}</h2>
+            <p>Box size:{aMail.size}</p>
+            <Link to={'/mailboxes/' + aMail._id}>Mailbox Details</Link>
         </div>
         )}
       
